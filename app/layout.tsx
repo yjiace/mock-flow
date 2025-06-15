@@ -16,7 +16,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {/* Header */}
+        <header className="flex justify-between items-center w-full px-24 py-4 fixed top-0 left-0 bg-white/80 backdrop-blur-md z-50 shadow-sm">
+          <div className="text-2xl font-bold text-purple-600">Mock Flow API</div>
+          <nav>
+            <ul className="flex space-x-8">
+              <li><a href="/" className="text-gray-700 hover:text-purple-600 text-lg font-medium transition-colors duration-300">首页</a></li>
+              <li><a href="/api-docs" className="text-gray-700 hover:text-purple-600 text-lg font-medium transition-colors duration-300">API文档</a></li>
+              <li><a href="#" className="text-gray-700 hover:text-purple-600 text-lg font-medium transition-colors duration-300">API测试器</a></li>
+            </ul>
+          </nav>
+          <button className="bg-blue-500 text-white px-6 py-3 rounded-md text-lg hover:bg-blue-600 transition-colors duration-300 shadow-lg">开始使用</button>
+        </header>
+
+        <main className="pt-24">
+          {children}
+        </main>
+
+        {/* Footer */}
+        <footer className="w-full py-10 text-center text-gray-500 text-base mt-20 border-t border-gray-200">
+          <p>© 2025 Mock Flow API. All rights reserved.</p>
+          <p className="mt-1">提供稳定可靠的模拟API服务。</p>
+        </footer>
+      </body>
     </html>
   );
 }
