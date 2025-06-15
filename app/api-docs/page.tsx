@@ -2,45 +2,45 @@ import React from 'react';
 
 const ApiDocsPage = () => {
   return (
-    <div className="flex min-h-screen bg-white">
-      {/* Left Sidebar - API List */}
-      <aside className="w-64 bg-white shadow-lg p-6 fixed h-full overflow-y-auto pt-24 z-40">
+    <div className="flex min-h-screen bg-white relative">
+      {/* Left Sidebar - API List - Floating Box */}
+      <aside className="w-64 bg-white shadow-lg p-6 fixed top-24 left-10 rounded-lg h-auto max-h-[calc(100vh-7rem)] overflow-y-auto z-40">
         <h2 className="text-2xl font-bold text-gray-800 mb-6">API 列表</h2>
         <nav>
           <ul>
             <li className="mb-3">
-              <a href="#get-users" className="block text-gray-700 hover:text-gray-900 font-medium py-2 px-3 rounded-md transition-colors duration-200 hover:bg-blue-50">
-                <span className="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">GET</span> /users
+              <a href="#get-users" className="block text-gray-700 hover:text-gray-900 font-medium py-2 px-3 rounded-md transition-colors duration-200 bg-sky-100 hover:bg-sky-200">
+                <span className="bg-green-100 text-green-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">GET</span> /users
               </a>
             </li>
             <li className="mb-3">
               <a href="#post-users" className="block text-gray-700 hover:text-gray-900 font-medium py-2 px-3 rounded-md transition-colors duration-200 hover:bg-blue-50">
-                <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">POST</span> /users
+                <span className="bg-blue-100 text-blue-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">POST</span> /users
               </a>
             </li>
             <li className="mb-3">
               <a href="#put-users-id" className="block text-gray-700 hover:text-gray-900 font-medium py-2 px-3 rounded-md transition-colors duration-200 hover:bg-blue-50">
-                <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">PUT</span> /users/{`{id}`}
+                <span className="bg-yellow-100 text-yellow-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">PUT</span> /users/{`{id}`}
               </a>
             </li>
             <li className="mb-3">
               <a href="#patch-users-id" className="block text-gray-700 hover:text-gray-900 font-medium py-2 px-3 rounded-md transition-colors duration-200 hover:bg-blue-50">
-                <span className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">PATCH</span> /users/{`{id}`}
+                <span className="bg-purple-100 text-purple-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">PATCH</span> /users/{`{id}`}
               </a>
             </li>
             <li className="mb-3">
               <a href="#delete-users-id" className="block text-gray-700 hover:text-gray-900 font-medium py-2 px-3 rounded-md transition-colors duration-200 hover:bg-blue-50">
-                <span className="bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">DELETE</span> /users/{`{id}`}
+                <span className="bg-red-100 text-red-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">DELETE</span> /users/{`{id}`}
               </a>
             </li>
             <li className="mb-3">
               <a href="#post-files" className="block text-gray-700 hover:text-gray-900 font-medium py-2 px-3 rounded-md transition-colors duration-200 hover:bg-blue-50">
-                <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">POST</span> /files
+                <span className="bg-blue-100 text-blue-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">POST</span> /files
               </a>
             </li>
             <li className="mb-3">
               <a href="#get-files-id-download" className="block text-gray-700 hover:text-gray-900 font-medium py-2 px-3 rounded-md transition-colors duration-200 hover:bg-blue-50">
-                <span className="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">GET</span> /files/{`{id}`}/download
+                <span className="bg-green-100 text-green-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">GET</span> /files/{`{id}`}/download
               </a>
             </li>
           </ul>
@@ -48,14 +48,14 @@ const ApiDocsPage = () => {
       </aside>
 
       {/* Right Content Area - API Descriptions */}
-      <main className="ml-64 flex-1 p-10 pt-24">
+      <main className="flex-1 p-10 pt-24 md:ml-80">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-8">API 文档</h1>
         <p className="text-xl text-gray-600 mb-12">探索我们的API接口，开始构建您的应用</p>
 
         {/* GET /users */}
-        <section id="get-users" className="bg-white p-8 rounded-lg shadow-md mb-12">
+        <section id="get-users" className="bg-gray-100 p-8 rounded-lg mb-12">
           <div className="flex items-center mb-6">
-            <span className="bg-green-500 text-white text-lg font-bold px-4 py-2 rounded-md mr-4">GET</span>
+            <span className="bg-green-200 text-green-700 text-sm font-bold px-3 py-1 rounded-md mr-4">GET</span>
             <h2 className="text-3xl font-bold text-gray-800">/users</h2>
           </div>
           <p className="text-gray-700 text-lg mb-6">检索系统中的用户列表。</p>
