@@ -85,7 +85,7 @@ const ApiDocsPage = () => {
                 <tr>
                   <td className="py-4 px-6 border-b border-gray-200 text-gray-700">sortBy <span className="bg-gray-200 text-gray-700 text-xs font-medium px-2 py-0.5 rounded">query</span></td>
                   <td className="py-4 px-6 border-b border-gray-200 text-gray-700">string</td>
-                  <td className="py-4 px-6 border-b border-gray-200 text-gray-700">用于排序的字段名称。例如: "创建时间"</td>
+                  <td className="py-4 px-6 border-b border-gray-200 text-gray-700">用于排序的字段名称。例如: &quot;创建时间&quot;</td>
                 </tr>
               </tbody>
             </table>
@@ -154,4 +154,4 @@ Accept: application/json`}</code>
   );
 };
 
-export default ApiDocsPage; 
+export default ApiDocsPage;
